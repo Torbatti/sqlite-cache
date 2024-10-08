@@ -1,0 +1,29 @@
+package views
+
+import "github.com/torbatti/sqlite-cache/models"
+import "strconv"
+
+templ BaziPage(info PageInfo) {
+
+	@BaseLayout(){
+		@BaseHead(info.HeadInfo){}
+
+		@BaseBody(){
+			@BaseHeader()
+			@bazi(info.Game)
+		}
+	}
+
+}
+
+// templ bazi(id int64) {
+templ bazi(game models.Game) {
+	<div id="bazi">
+		// <h1>{strconv.Itoa(int(id))}</h1>
+		<h1>{strconv.Itoa(int(game.ID))}</h1>
+		<h1>{game.Game}</h1>
+		<h1>{game.Dev}</h1>
+		<h1>{game.Publisher}</h1>
+		<h1>{game.Platform}</h1>
+	</div>
+}

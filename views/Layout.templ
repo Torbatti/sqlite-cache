@@ -1,0 +1,47 @@
+package views
+
+templ BaseLayout() {
+
+    <!DOCTYPE html>
+	<html lang="en">
+
+    { children... }
+
+
+	</html>
+
+}
+
+templ BaseHead(info HeadInfo) {
+
+    <head>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content={info.Description}>
+		<title>{info.Title}</title>
+
+		// <script src="https://unpkg.com/htmx.org@2.0.2"></script>
+		// <script src="/scripts/htmx.min.js"></script>
+
+		// <link rel="stylesheet" href="/public/styles/universal/albors.css">
+
+        { children... }
+
+	</head>
+    
+}
+
+templ BaseBody() {
+
+    <body>
+      { children... }
+	</body>
+
+}
+
+templ BaseHeader() {
+	<header>
+		<h1>تست</h1>
+	</header>
+}

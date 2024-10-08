@@ -1,0 +1,9 @@
+version: "2"
+sql:
+  - engine: "sqlite"
+    queries: "query/games.sql"
+    schema: "schema/games.sql"
+    gen:
+      go:
+        package: "models"
+        out: ".."
